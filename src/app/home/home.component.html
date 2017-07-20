@@ -5,42 +5,113 @@
   -->
 <p>This is a Clarity seed application. This is the default page that loads for the application.</p>
 
-<clr-dropdown [clrMenuPosition]="'bottom-right'">
-    <button class="btn btn-outline-primary" clrDropdownToggle>
-        Dropdown
-        <clr-icon shape="caret down"></clr-icon>
-    </button>
-    <div class="dropdown-menu">
-        <label class="dropdown-header">Dropdown header</label>
-        <a href="javascript://" clrDropdownItem>Action 1</a>
-        <a href="javascript://" clrDropdownItem>Action 2</a>
-        <a href="javascript://" class="disabled" clrDropdownItem>Disabled</a>
-        <div class="dropdown-divider"></div>
-        <a href="javascript://" clrDropdownItem>Link 1</a>
-        <a href="javascript://" clrDropdownItem>Link 2</a>
-    </div>
-</clr-dropdown>
-<div class="row">
-    <div class="col-lg-5 col-md-8 col-sm-12 col-xs-12">
-        <div class="card">
-            <div class="card-header">
-                Header
-            </div>
-            <div class="card-block">
-                <div class="card-title">
-                    Block
-                </div>
-                <div class="card-text">
-                    ...
-                </div>
-            </div>
-            <div class="card-footer">
-                <button class="btn btn-sm btn-link">Footer Action 1</button>
-                <button class="btn btn-sm btn-link">Footer Action 2</button>
-            </div>
+<div class="main-container">
+    <header class="header header-6">
+        Level 1
+    </header>
+    <div class="content-container">
+        <div class="content-area">
+          <div class="row">
+              <div class="col-xs-12 col-md-12 col-lg-6 col-xl-4">
+                  <table class="table">
+                      <thead>
+                          <tr>
+                              <th class="left">Language</th>
+                              <th>Foo</th>
+                              <th>Bar</th>
+                              <th>Baz</th>
+                          </tr>
+                      </thead>
+                      <tbody>
+                          <tr>
+                              <td class="left">Pig Latin</td>
+                              <td>Oofay</td>
+                              <td>Arbay</td>
+                              <td>Azbay</td>
+                          </tr>
+                          <tr>
+                              <td class="left">Bizarro</td>
+                              <td>Bar</td>
+                              <td>Foo</td>
+                              <td>Bang</td>
+                          </tr>
+                          <tr>
+                              <td class="left">Hodor</td>
+                              <td>Hodor</td>
+                              <td>Hodor</td>
+                              <td>Hodor</td>
+                          </tr>
+                      </tbody>
+                  </table>
+              </div>
+              <div class="col-xs-12 col-md-12 col-lg-6 col-xl-4">
+                  <table class="table">
+                      <thead>
+                          <tr>
+                              <th class="left">Color</th>
+                              <th>R</th>
+                              <th>G</th>
+                              <th>B</th>
+                          </tr>
+                      </thead>
+                      <tbody>
+                          <tr>
+                              <td class="left">Black</td>
+                              <td>0</td>
+                              <td>0</td>
+                              <td>0</td>
+                          </tr>
+                          <tr>
+                              <td class="left">New Black</td>
+                              <td>255</td>
+                              <td>165</td>
+                              <td>0</td>
+                          </tr>
+                          <tr>
+                              <td class="left">Pantone 292</td>
+                              <td>98</td>
+                              <td>168</td>
+                              <td>229</td>
+                          </tr>
+                      </tbody>
+                  </table>
+              </div>
+
+          </div>
         </div>
+        <nav class="sidenav">
+            <section class="sidenav-content">
+                <a href="Level 1" class="nav-link active">
+                    Nav Element 1
+                </a>
+                <a href="Level 1" class="nav-link">
+                    Nav Element 2
+                </a>
+                <section class="nav-group collapsible">
+                    <input id="tabexample1" type="checkbox">
+                    <label for="tabexample1">Collapsible Nav Element</label>
+                    <ul class="nav-list">
+                        <li><a class="nav-link">Link 1</a></li>
+                        <li><a class="nav-link">Link 2</a></li>
+                    </ul>
+                </section>
+                <section class="nav-group">
+                    <input id="tabexample2" type="checkbox">
+                    <label for="tabexample2">Default Nav Element</label>
+                    <ul class="nav-list">
+                        <li><a class="nav-link">Link 1</a></li>
+                        <li><a class="nav-link">Link 2</a></li>
+                        <li><a class="nav-link active">Link 3</a></li>
+                        <li><a class="nav-link">Link 4</a></li>
+                        <li><a class="nav-link">Link 5</a></li>
+                        <li><a class="nav-link">Link 6</a></li>
+                    </ul>
+                </section>
+            </section>
+        </nav>
     </div>
 </div>
+<<<<<<< HEAD
 Clickable
 <div class="main-container">
     <header class="header header-6">
@@ -100,3 +171,5 @@ Clickable
         </nav>
     </div>
 </div>
+=======
+>>>>>>> 87e9dd0141eb41d04e73f1b7fc08b14edf8b40d2
