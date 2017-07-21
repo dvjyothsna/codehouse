@@ -4,6 +4,7 @@
  * The full license information can be found in LICENSE in the root directory of this project.
  */
 import { Component } from '@angular/core';
+import { NameService } from '../services/name.service';
 
 @Component({
     styleUrls: ['./StartPage.component.scss'],
@@ -11,5 +12,9 @@ import { Component } from '@angular/core';
 })
 export class StartPageComponent {
     open: Boolean = false;
+
+    constructor(private nameService: NameService) {
+       
+    }
 
 }

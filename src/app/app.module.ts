@@ -6,6 +6,7 @@ import { HttpModule } from '@angular/http';
 import { ClarityModule } from 'clarity-angular';
 import { AppComponent } from './app.component';
 import { ROUTING } from "./app.routing";
+import { NameService } from "./services/name.service";
 import { HomeComponent } from "./home/home.component";
 import { Home1Component } from "./home1/home1.component";
 import { AboutComponent } from "./about/about.component";
@@ -31,7 +32,7 @@ const config: SocketIoConfig = { url: 'http://localhost:8988', options: {} };
         SocketIoModule.forRoot(config) ,
         ROUTING
     ],
-    providers: [],
+    providers: [NameService],
     bootstrap: [AppComponent]
 })
 export class AppModule {

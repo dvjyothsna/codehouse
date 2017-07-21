@@ -5,6 +5,7 @@
  */
  import { Component, OnInit } from "@angular/core";
  import { Socket } from 'ng-socket-io';
+ import { NameService } from '../services/name.service';
 
  import { Observable } from 'rxjs/Observable';
  import { Subscription } from 'rxjs/Subscription';
@@ -34,7 +35,7 @@ export class HomeComponent implements OnInit{
     score = 0;
     retries = 0;
     opponentScore = 0;
-    constructor(private socket:Socket) {}
+    constructor(private socket:Socket , private nameService:NameService) {}
     ngOnInit() {
     this.subscribeToNotifications();
         let timer = Observable.timer(2000,3000);

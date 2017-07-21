@@ -5,6 +5,7 @@
 </div>
 <div class="row">
   <div class="col-xs-4 offset-xs-5">
+    <input #nameInput type="text" [value]="nameService.name" (change)="nameService.name = nameInput.value">
 <button class="btn btn-primary" (click)="open = true">Start Game</button>
 <clr-modal [(clrModalOpen)]="open">
   <h3 class="modal-title">Welcome to Code ninja</h3>
