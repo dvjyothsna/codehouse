@@ -29,6 +29,8 @@ export class HomeComponent implements OnInit{
     ["IF", "APPLE", ">", "MAX"], ["MAX", "=", "APPLE", " "], ["BUY", "MAX", " ", " "]];
     your_score: number[] = [0,0,0,0,0];
     opponent_score: number[] = [0,0,0,0,0];
+    your_total: number =0;
+    opp_total: number =0;
     open: Boolean = false;
 
     pointsSub: Subscription;
@@ -73,6 +75,11 @@ export class HomeComponent implements OnInit{
             var audioElement = document.createElement('audio');
             audioElement.setAttribute('src', "images/claps.mp3");
             audioElement.play();
+            for(let i =0; i < 5; i++)
+            {
+                this.your_total = this.your_total + this.your_score[i];
+                this.opp_total = this.opp_total + this.opponent_score[i];
+            }
             this.open = true;
 
             }
@@ -107,7 +114,14 @@ export class HomeComponent implements OnInit{
         }
     }
 
-
+    findWinner()
+    {
+      for(let i =0; i < 5; i++)
+      {
+          this.your_total = this.your_total + this.your_score[i];
+          this.opp_total = this.your_total + this.opponent_score[i];
+      }
+    }
     calculatePoints(lineNumber) {
         var audioElement = document.createElement('audio');
         audioElement.setAttribute('src', "images/yay.mp3");

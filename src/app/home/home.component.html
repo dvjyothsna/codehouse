@@ -201,9 +201,12 @@
     </div>
 </div>
 <clr-modal [(clrModalOpen)]="open">
-  <h3 class="modal-title">Congrats on completing level 1 :)</h3>
+  <h3 class="modal-title">Congratulations on completing level 1 :)</h3>
   <div class="modal-body">
-    <p>Lets keep helping the world</p>
+    <p> Your score is : {{your_total}} </p>
+    <p> Opponent score is : {{opp_total}} </p>
+    <p>Lets keep learning with Turtle Code!!</p>
+
   </div>
   <div class="modal-footer">
     <button type="button" class="btn btn-success" (click)="open = false" href="#" [routerLink]="['/home1']" routerLinkActive="active">Continue to Level 2</button>
