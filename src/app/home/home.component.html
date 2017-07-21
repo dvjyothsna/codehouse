@@ -11,73 +11,68 @@
     </header>
     <div class="content-container">
         <div class="content-area">
-          <div class="row">
-              <div class="col-xs-12 col-md-12 col-lg-6 col-xl-4">
-                  <table class="table">
-                      <thead>
-                          <tr>
-                              <th class="left">Language</th>
-                              <th>Foo</th>
-                              <th>Bar</th>
-                              <th>Baz</th>
-                          </tr>
-                      </thead>
-                      <tbody>
-                          <tr>
-                              <td class="left">Pig Latin</td>
-                              <td>Oofay</td>
-                              <td>Arbay</td>
-                              <td>Azbay</td>
-                          </tr>
-                          <tr>
-                              <td class="left">Bizarro</td>
-                              <td>Bar</td>
-                              <td>Foo</td>
-                              <td>Bang</td>
-                          </tr>
-                          <tr>
-                              <td class="left">Hodor</td>
-                              <td>Hodor</td>
-                              <td>Hodor</td>
-                              <td>Hodor</td>
-                          </tr>
-                      </tbody>
-                  </table>
-              </div>
-              <div class="col-xs-12 col-md-12 col-lg-6 col-xl-4">
-                  <table class="table">
-                      <thead>
-                          <tr>
-                              <th class="left">Color</th>
-                              <th>R</th>
-                              <th>G</th>
-                              <th>B</th>
-                          </tr>
-                      </thead>
-                      <tbody>
-                          <tr>
-                              <td class="left">Black</td>
-                              <td>0</td>
-                              <td>0</td>
-                              <td>0</td>
-                          </tr>
-                          <tr>
-                              <td class="left">New Black</td>
-                              <td>255</td>
-                              <td>165</td>
-                              <td>0</td>
-                          </tr>
-                          <tr>
-                              <td class="left">Pantone 292</td>
-                              <td>98</td>
-                              <td>168</td>
-                              <td>229</td>
-                          </tr>
-                      </tbody>
-                  </table>
+          <p>CODE:</p>
+          <div class="content-area">
+                <div class="row flex-items-xs-top">
+                    <div class="col-xs-2 flex-xs-middle">
+                      <span class="label label-purple clickable">{{CODELIST[0]}}</span>
+                        </div>
+                        <div class="col-xs-2 flex-xs-middle">
+                      <span class="label label-purple clickable">{{CODELIST[1]}}</span>
+                      </div>
+                      <div class="col-xs-2 flex-xs-middle">
+                        <span class="label label-purple clickable">{{CODELIST[2]}}</span>
+                      </div>
+                    </div>
+                    <div class="row flex-items-xs-top">
+                        <div class="col-xs-2 flex-xs-middle">
+                          <span class="label label-purple clickable">{{CODELIST[3]}}</span>
+                        </div>
+                        <div class="col-xs-2 flex-xs-middle">
+                          <span class="label label-purple clickable">{{CODELIST[4]}}</span>
+                        </div>
+                        <div class="col-xs-2 flex-xs-middle">
+                          <span class="label label-purple clickable">{{CODELIST[5]}}</span>
+                        </div>
+                        <div class="col-xs-2 flex-xs-middle">
+                          <span class="label label-purple clickable">{{CODELIST[6]}}</span>
+                        </div>
+                    </div>
+                    <div class="row flex-items-xs-top">
+                        <div class="col-xs-2 flex-xs-middle">
+                          <span class="label label-purple clickable">{{CODELIST[7]}}</span>
+                          </div>
+                          <div class="col-xs-2 flex-xs-middle">
+                          <span class="label label-purple clickable">{{CODELIST[8]}}</span>
+                          </div>
+                          <div class="col-xs-2 flex-xs-middle">
+                            <span class="label label-purple clickable">{{CODELIST[9]}}</span>
+                          </div>
+                          <div class="col-xs-2 flex-xs-middle">
+                            <span class="label label-purple clickable">{{CODELIST[10]}}</span>
+                          </div>
+                      </div>
+                      <div class="row flex-items-xs-top">
+                          <div class="col-xs-2 flex-xs-middle">
+                            <span class="label label-purple clickable">{{CODELIST[11]}}</span>
+                          </div>
+                          <div class="col-xs-2 flex-xs-middle">
+                            <span class="label label-purple clickable">{{CODELIST[12]}}</span>
+                          </div>
+                          <div class="col-xs-2 flex-xs-middle">
+                            <span class="label label-purple clickable">{{CODELIST[13]}}</span>
+                          </div>
+                      </div>
+                      <div class="row flex-items-xs-top">
+                          <div class="col-xs-2 flex-xs-middle">
+                            <span class="label label-purple clickable">{{CODELIST[14]}}</span>
+                          </div>
+                          <div class="col-xs-2 flex-xs-middle">
+                            <span class="label label-purple clickable">{{CODELIST[15]}}</span>
+                          </div>
+                      </div>
               </div>
 
-          </div>
         </div>
         <nav class="sidenav">
             <section class="sidenav-content">
@@ -85,9 +80,9 @@
                   <input id="tabexample1" type="checkbox">
                   <label for="tabexample1">VARIABLES</label>
                   <ul class="nav-list">
-                      <button class="btn btn-primary">MAX</button>
-                      <button class="btn btn-primary">APPLE</button>
-                      <button class="btn btn-primary">APPLE #1</button>
+                      <button class="btn btn-primary" (click)="clickButton('MAX')">MAX</button>
+                      <button class="btn btn-primary" (click)="clickButton('APPLE')">APPLE</button>
+                      <button class="btn btn-primary" (click)="clickButton('APPLE #1')">APPLE #1</button>
                   </ul>
               </section>
               <section class="nav-group collapsible">
@@ -96,7 +91,7 @@
                   <ul class="nav-list">
                       <button class="btn btn-primary" (click)="clickButton('FOR EACH')">FOR EACH</button>
                       <button class="btn btn-primary" (click)="clickButton('IN')">IN</button>
-                      <button class="btn btn-primary" (click)="clickButton('BASKET')">BASKET</button>                      
+                      <button class="btn btn-primary" (click)="clickButton('BASKET')">BASKET</button>
                       <button class="btn btn-primary" (click)="clickButton('IF')">IF</button>
                       <button class="btn btn-primary" (click)="clickButton('=')">=</button>
                       <button class="btn btn-primary" (click)="clickButton('>')">></button>
