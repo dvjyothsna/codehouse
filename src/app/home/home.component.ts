@@ -38,7 +38,7 @@ export class HomeComponent implements OnInit{
     constructor(private socket:Socket , private nameService:NameService) {}
     ngOnInit() {
     this.subscribeToNotifications();
-        let timer = Observable.timer(2000,3000);
+        let timer = Observable.timer(0,1500);
         timer.subscribe(t=>this.seconds = t);
     }
 

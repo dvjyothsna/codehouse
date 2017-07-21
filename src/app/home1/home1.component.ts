@@ -21,8 +21,8 @@ export class Home1Component implements OnInit{
     selected_line: number = 4;
     selected_word: number = 4;
     COLOURLIST: string[][] = [["primary","primary","primary", "primary"],["primary","primary","primary","primary"],["primary","primary","primary","primary"],["primary","primary","primary", "primary"],["primary","primary","primary", "primary", " "]];
-    SOLUTION: string[][] = [["MAX", "=", "APPLE #1", " "], ["FOR EACH", "APPLE", "IN", "BASKET"],
-    ["IF", "APPLE", ">", "MAX"], ["MAX", "=", "APPLE", " "], ["BUY", "MAX", " ", " "]];
+    SOLUTION: string[][] = [["MAX_HEIGHT", "=", "STUDENT #1", " "], ["FOR EACH", "STUDENT", "IN", "CLASS"],
+    ["IF", "STUDENT", ">", "MAX"], ["MAX", "=", "STUDENT", " "], ["BUY", "MAX_HEIGHT", " ", " "]];
     your_score: number[] = [0,0,0,0,0];
     opponent_score: number[] = [0,0,0,0,0];
 

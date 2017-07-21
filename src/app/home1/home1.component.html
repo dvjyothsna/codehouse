@@ -26,7 +26,7 @@
       <progress max="100" value="40" data-displayval="0%"></progress>
   </div>
 <div class="main-container">
-    
+
     <div class="content-container">
         <div class="content-area">
 
@@ -168,6 +168,50 @@
                             <button class="btn">{{ opponent_score[4]}}</button>
                               </div>
                       </div>
+                      <div class="row flex-items-xs-middle">
+                          <div class="col-xl flex-xs-middle">
+                            <span class="btn btn-{{COLOURLIST[4][0]}}" (click)="clickLabel(4,0)">{{CODELIST[4][0]}}</span>
+                          </div>
+                          <div class="col-xl flex-xs-middle">
+                            <span class="btn btn-{{COLOURLIST[4][1]}}" (click)="clickLabel(4,1)">{{CODELIST[4][1]}}</span>
+                          </div>
+                          <div class="col-xl flex-xs-middle">
+                          </div>
+                          <div class="col-xl flex-xs-middle">
+                          </div>
+                          <div class="col-xl flex-xs-middle">
+                          </div>
+                          <div class="col-xl flex-xs-middle">
+                            <span class="btn btn-success-outline" (click)="run(4)">RUN</span>
+                          </div>
+                          <div class="btn-group">
+                            <button class="btn">{{ your_score[4] }}</button>
+                            <button class="btn">{{ opponent_score[4]}}</button>
+                              </div>
+                      </div>
+                      <div class="row flex-items-xs-middle">
+                            <div class="col-xl flex-xs-middle">
+                            </div>
+                            <div class="col-xl flex-xs-middle">
+                            <span class="btn btn-{{COLOURLIST[2][0]}}" (click)="clickLabel(2,0)">{{CODELIST[2][0]}}</span>
+                            </div>
+                            <div class="col-xl flex-xs-middle">
+                            <span class="btn btn-{{COLOURLIST[2][1]}}" (click)="clickLabel(2,1)">{{CODELIST[2][1]}}</span>
+                            </div>
+                            <div class="col-xl flex-xs-middle">
+                              <span class="btn btn-{{COLOURLIST[2][2]}}" (click)="clickLabel(2,2)">{{CODELIST[2][2]}}</span>
+                            </div>
+                            <div class="col-xl flex-xs-middle">
+                              <span class="btn btn-{{COLOURLIST[2][3]}}" (click)="clickLabel(2,3)">{{CODELIST[2][3]}}</span>
+                            </div>
+                            <div class="col-xl flex-xs-middle">
+                              <span class="btn btn-success-outline" (click)="run(2)">RUN</span>
+                            </div>
+                            <div class="btn-group">
+                              <button class="btn">{{ your_score[2] }}</button>
+                              <button class="btn">{{ opponent_score[2]}}</button>
+                                </div>
+                        </div>
               </div>
 
         </div>
@@ -177,10 +221,10 @@
                   <input id="tabexample1" type="checkbox">
                   <label for="tabexample1">VARIABLES</label>
                   <ul class="nav-list">
-                      <button class="btn btn-primary" (click)="clickButton('MAX')">MAX</button>
-                      <button class="btn btn-primary" (click)="clickButton('APPLE')">APPLE</button>
-                      <button class="btn btn-primary" (click)="clickButton('APPLE #1')">APPLE #1</button>
-                      <button class="btn btn-primary" (click)="clickButton('BASKET')">BASKET</button>
+                      <button class="btn btn-primary" (click)="clickButton('MAX_HEIGHT')">MAX_HEIGHT</button>
+                      <button class="btn btn-primary" (click)="clickButton('STUDENT')">STUDENT</button>
+                      <button class="btn btn-primary" (click)="clickButton('STUDENT #1')">STUDENT #1</button>
+                      <button class="btn btn-primary" (click)="clickButton('CLASS')">CLASS</button>
                   </ul>
               </section>
               <section class="nav-group collapsible">
@@ -193,7 +237,7 @@
                       <button class="btn btn-primary" (click)="clickButton('=')">=</button>
                       <button class="btn btn-primary" (click)="clickButton('>')">></button>
                       <button class="btn btn-primary" (click)="clickButton('<')"><</button>
-                      <button class="btn btn-primary" (click)="clickButton('BUY')">BUY</button>
+                      <button class="btn btn-primary" (click)="clickButton('SORT')">BUY</button>
                   </ul>
               </section>
             </section>

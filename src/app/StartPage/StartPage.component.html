@@ -1,20 +1,22 @@
 <div class="row">
   <div class="col-xs-4 offset-xs-4">
-    <img src="http://code-ninja.co/images/SiteNinja.png" />
+    <img src="https://freeclipartspot.com//storage/upload/turtle-clipart/turtle-clipart-86.png" />
   </div>
 </div>
 <div class="row">
   <div class="col-xs-4 offset-xs-5">
     <input #nameInput type="text" [value]="nameService.name" (change)="nameService.name = nameInput.value">
-<button class="btn btn-primary" (click)="open = true">Start Game</button>
-<clr-modal [(clrModalOpen)]="open">
-  <h3 class="modal-title">Welcome to Code ninja</h3>
+    <button class="btn btn-primary" (click)="open = true">Start Game</button>
+  </div>
+<clr-modal [(clrModalOpen)]="open" clrModalSize="lg">
+  <h3 class="modal-title">Welcome to Turtle Code</h3>
   <div class="modal-body">
-    <p>Here you will compete to become the sensie of solving everyday problem with code</p>
+    <p>Here you will compete to become great at solving everyday problem with code</p>
+          <img src="/images/Steps.png"  height=90% width=90% />
   </div>
   <div class="modal-footer">
     <button type="button" class="btn btn-success" (click)="open = false" href="#" [routerLink]="['/home']" routerLinkActive="active">Continue</button>
   </div>
 </clr-modal>
-</div>
+
 </div>
