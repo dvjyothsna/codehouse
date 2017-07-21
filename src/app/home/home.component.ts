@@ -9,6 +9,8 @@
  import { Observable } from 'rxjs/Observable';
  import { Subscription } from 'rxjs/Subscription';
  import 'rxjs/add/operator/map';
+ import 'rxjs/add/observable/timer';
+ import 'rxjs/Observable';
 
 @Component({
     styleUrls: ['./home.component.scss'],
@@ -16,6 +18,7 @@
 })
 
 export class HomeComponent implements OnInit{
+    seconds: number = 0;
     correct_lines: number = 0;
     CODELIST: string[][] = [[" "," "," "," "],[" "," "," "," "],[" "," "," "," "],[" "," "," "," "],[" "," "," "," ", " "]];
     selected_line: number = 4;
@@ -34,7 +37,9 @@ export class HomeComponent implements OnInit{
     constructor(private socket:Socket) {}
     ngOnInit() {
     this.subscribeToNotifications();
-        }
+        let timer = Observable.timer(2000,3000);
+        timer.subscribe(t=>this.seconds = t);
+    }
 
     clickLabel(lineNumber: number, wordNumber: number) {
         this.selected_line = lineNumber;
