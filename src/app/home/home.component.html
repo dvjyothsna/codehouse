@@ -15,15 +15,51 @@
           <div class="card-block clickable">
                 <p class="card-text">
                     Grandma Jane has come to the supermarket. She wants to make an apple pie but she can buy only one apple. So, she wants to get the largest apple from the store.
-                    The supermarket keeps all applesof different sizes in a single basket.Can you help grandma pick the largest apple form the basket?
+                    The supermarket keeps apples of different sizes in a single basket.Can you help grandma pick the largest apple form the basket?
                 </p>
             </div>
         </div>
 </div>
 
 <div class="row col-lg-12">
- <h4><p align="right">Time Left : {{150 - seconds}}</p></h4>
+ <h4><p align="right">Time Left : {{300 - seconds}}</p></h4>
 </div>
+<button type="button" class="btn btn-success" (click)="visualize()">Visualize</button>
+
+
+
+<div class="row" style="display: inline">
+
+
+  <img width=96 height=100 src="images/2.png">
+  <img  width=126 height=130 src="images/3.png">
+  <img  width=76 height=80 src="images/1.png">
+  <img  width=156 height=160 src="images/4.png">
+  <img  width=156 height=160 src="images/empty.png">
+
+  <img *ngIf="c2" width=96 height=100 src="images/2.png">
+  <img *ngIf="cl" width=80 height=90 src="images/less.png">
+  <img *ngIf="c3"  width=126 height=130 src="images/3.png">
+  <img *ngIf="cl2" width=80 height=90 src="images/less.png">
+  <img  *ngIf="cg" width=80 height=90 src="images/greter.png">
+  <img  *ngIf="c1" width=76 height=80 src="images/1.png">
+  <img  *ngIf="c4" width=156 height=160 src="images/4.png">
+
+
+
+  <!-- <img *ngIf="im1" src="images/1.png"> -->
+  <img *ngIf="im2" src="images/c2.gif">
+  <img *ngIf="im3" width=136 height=120 src="images/c3.gif">
+  <img *ngIf="im4" src="images/c4.gif">
+  <!-- <ul style="display: inline">
+    <li><img src="images/1.png"></li>
+    <li><img src="images/2.png"></li>
+    <li><img src="images/3.png"></li>
+    <li><img src="images/4.png"></li>
+</ul> -->
+
+</div>
+
  <div class="progress danger">
      <progress max="100" value={{seconds}} data-displayval="0%"></progress>
  </div>
@@ -206,7 +242,7 @@
     </div>
 </div>
 <clr-modal [(clrModalOpen)]="open" >
-  <h3 class="modal-title">You were great and Grandma Jane was thanked you with a slixe of her world famous pie. YUMMMM!!!</h3>
+  <h3 class="modal-title">You were great and Grandma Jane thanked you with a slice of her world famous pie. YUMMMM!!!</h3>
   <div class="modal-body">
     <img src="http://woman-space.ru/bitrix/templates/.default/components/bitrix/main.share/template1/handlers/lang/ru/pirojki"  height=90% width=90% />
     <p> Your score is : {{your_total}} </p>

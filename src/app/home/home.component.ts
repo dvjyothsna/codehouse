@@ -19,6 +19,22 @@
 })
 
 export class HomeComponent implements OnInit{
+showImage1: boolean = false;
+    im1 :boolean = false;
+    im2 :boolean = false;
+    im3 :boolean = false;
+    im4 :boolean = false;
+
+    c1 :boolean = false;
+    c2 :boolean = false;
+    c3 :boolean = false;
+    c4 :boolean = false;
+    cl :boolean = false;
+    cg :boolean = false;
+    cl2 :boolean = false;
+
+    step = 0;
+
     seconds: number = 0;
     correct_lines: number = 0;
     CODELIST: string[][] = [[" "," "," "," "],[" "," "," "," "],[" "," "," "," "],[" "," "," "," "],[" "," "," "," ", " "]];
@@ -153,6 +169,60 @@ export class HomeComponent implements OnInit{
           this.opponentScore = this.opponentScore + data["points"];
           console.log(this.opponentScore);
         });
+    }
+    visualize() {
+
+    console.log(this.step);
+    if(this.step == 0) {
+        this.im2 = true;
+
+      }
+    if (this.step == 1) {
+        this.im2 = false;
+        this.c2 = true;
+        this.cl = true;
+        this.c3 = true;
+
+    }
+       if(this.step == 2) {
+          this.im2 = false;
+          this.im3 = true;
+
+        }
+        if(this.step == 3) {
+        this.im3 = false;
+        this.c2 = false;
+        this.cl = false;
+
+        this.cg = true;
+        this.c1 = true;
+
+
+        }
+
+          if(this.step == 4) {
+              this.im3 = true;
+          }
+          if(this.step == 5) {
+          this.im3 = false;
+          this.c1 = false;
+          this.cl =false;
+          this.cl2 = true;
+          this.cg = false;
+          this.c4 = true;
+
+
+            }
+
+        if(this.step == 6) {
+        this.im3 = false;
+        this.c4 = false;
+        this.cl2 = false;
+        this.c3 = false;
+        this.im4 = true;
+        }
+              this.step = this.step + 1;
+
     }
 
 }
