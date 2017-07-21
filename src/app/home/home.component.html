@@ -45,26 +45,29 @@
           </div>
           <p>CODE:</p>
           <div class="content-area">
-           <div class="row flex-items-xs-top">
-                <div class="col-xs-1 flex-xs-middle">
+           <div class="row flex-items-xs-middle">
+                <div class="col-xl flex-xs-middle">
                 </div>
-                <div class="col-xs-1 flex-xs-middle">
+                <div class="col-xl flex-xs-middle">
                 </div>
-                <div class="col-xs-1 flex-xs-middle">
+                <div class="col-xl flex-xs-middle">
                 </div>
-                <div class="col-xs-1 flex-xs-middle">
+                <div class="col-xl flex-xs-middle">
                 </div>
-                <div class="col-xs-1 flex-xs-middle">
+                <div class="col-xl flex-xs-middle">
                 </div>
-                <div class="col-lg-6 flex-xs-middle">
-                <span class="btn" (click)="run(1)" style="outline: none">OP</span>
+                <div class="col-xl flex-xs-middle">
+                </div>
+                <div class="col-xl flex-xs-middle">
+                </div>
+
+                <!-- <span class="btn" (click)="run(1)" style="outline: none"></span> -->
                     <div class="btn-group">
                       <button class="btn">You</button>
-                      <button class="btn">ABC</button>
+                      <button class="btn">OPPONENT</button>
                     </div>
-                  </div>
                 </div>
-                <div class="row flex-items-xs-top">
+                <div class="row flex-items-xs-middle">
                     <div class="col-xl flex-xs-middle">
                       <span class="btn btn-{{COLOURLIST[0][0]}}" (click)="clickLabel(0,0)">{{CODELIST[0][0]}}</span>
                         </div>
@@ -80,17 +83,13 @@
                       </div>
                       <div class="col-xl flex-xl-middle">
                         <span class="btn btn-success-outline" (click)="run(0)">RUN</span>
-                        <div class="btn-group">
-                          <button class="btn">{{ your_score[0] }}</button>
-                          <button class="btn">{{ opponent_score[0]}}</button>
-                            </div>
                       </div>
                       <div class="btn-group">
-                            <button class="btn">5</button>
-                            <button class="btn">2</button>
-                      </div>
+                        <button class="btn">{{ your_score[0] }}</button>
+                        <button class="btn">{{ opponent_score[0]}}</button>
+                          </div>
                     </div>
-                    <div class="row flex-items-xs-top">
+                    <div class="row flex-items-xs-middle">
                         <div class="col-xl flex-xs-middle">
                           <span class="btn btn-{{COLOURLIST[1][0]}}" (click)="clickLabel(1,0)">{{CODELIST[1][0]}}</span>
                         </div>
@@ -110,12 +109,12 @@
                           <span class="btn btn-success-outline" (click)="run(1)">RUN</span>
                         </div>
                         <div class="btn-group">
-                              <button class="btn">5</button>
-                              <button class="btn">2</button>
-                        </div>
+                          <button class="btn">{{ your_score[1] }}</button>
+                          <button class="btn">{{ opponent_score[1]}}</button>
+                            </div>
                     </div>
 
-                    <div class="row flex-items-xs-top">
+                    <div class="row flex-items-xs-middle">
                           <div class="col-xl flex-xs-middle">
                           </div>
                           <div class="col-xl flex-xs-middle">
@@ -134,11 +133,11 @@
                             <span class="btn btn-success-outline" (click)="run(2)">RUN</span>
                           </div>
                           <div class="btn-group">
-                                <button class="btn">5</button>
-                                <button class="btn">2</button>
-                          </div>
+                            <button class="btn">{{ your_score[2] }}</button>
+                            <button class="btn">{{ opponent_score[2]}}</button>
+                              </div>
                       </div>
-                      <div class="row flex-items-xs-top">
+                      <div class="row flex-items-xs-middle">
                           <div class="col-xl flex-xs-middle">
                           </div>
                           <div class="col-xl flex-xs-middle">
@@ -157,11 +156,11 @@
                             <span class="btn btn-success-outline" (click)="run(3)">RUN</span>
                           </div>
                           <div class="btn-group">
-                                <button class="btn">5</button>
-                                <button class="btn">2</button>
-                          </div>
+                            <button class="btn">{{ your_score[3] }}</button>
+                            <button class="btn">{{ opponent_score[3]}}</button>
+                              </div>
                       </div>
-                      <div class="row flex-items-xs-top">
+                      <div class="row flex-items-xs-middle">
                           <div class="col-xl flex-xs-middle">
                             <span class="btn btn-{{COLOURLIST[4][0]}}" (click)="clickLabel(4,0)">{{CODELIST[4][0]}}</span>
                           </div>
@@ -178,9 +177,9 @@
                             <span class="btn btn-success-outline" (click)="run(4)">RUN</span>
                           </div>
                           <div class="btn-group">
-                                <button class="btn">5</button>
-                                <button class="btn">2</button>
-                          </div>
+                            <button class="btn">{{ your_score[4] }}</button>
+                            <button class="btn">{{ opponent_score[4]}}</button>
+                              </div>
                       </div>
               </div>
 
