@@ -1,0 +1,19 @@
+<div class="row">
+  <div class="col-xs-4 offset-xs-4">
+    <img src="http://code-ninja.co/images/SiteNinja.png" />
+  </div>
+</div>
+<div class="row">
+  <div class="col-xs-4 offset-xs-5">
+<button class="btn btn-primary" (click)="open = true">Start Game</button>
+<clr-modal [(clrModalOpen)]="open">
+  <h3 class="modal-title">Welcome to Code ninja</h3>
+  <div class="modal-body">
+    <p>Here you will compete to become the sensie of solving everyday problem with code</p>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-success" (click)="open = false" href="#" [routerLink]="['/home']" routerLinkActive="active">Continue</button>
+  </div>
+</clr-modal>
+</div>
+</div>

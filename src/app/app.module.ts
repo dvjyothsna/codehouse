@@ -7,7 +7,9 @@ import { ClarityModule } from 'clarity-angular';
 import { AppComponent } from './app.component';
 import { ROUTING } from "./app.routing";
 import { HomeComponent } from "./home/home.component";
+import { Home1Component } from "./home1/home1.component";
 import { AboutComponent } from "./about/about.component";
+import { StartPageComponent } from "./StartPage/StartPage.component";
 import { SocketIoModule, SocketIoConfig } from 'ng-socket-io';
 
 const config: SocketIoConfig = { url: 'http://localhost:8988', options: {} };
@@ -16,7 +18,9 @@ const config: SocketIoConfig = { url: 'http://localhost:8988', options: {} };
     declarations: [
         AppComponent,
         AboutComponent,
-        HomeComponent
+        StartPageComponent,
+        HomeComponent,
+        Home1Component
     ],
     imports: [
         BrowserAnimationsModule,

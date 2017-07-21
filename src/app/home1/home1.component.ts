@@ -11,11 +11,11 @@
  import 'rxjs/add/operator/map';
 
 @Component({
-    styleUrls: ['./home.component.scss'],
-    templateUrl: './home.component.html',
+    styleUrls: ['./home1.component.scss'],
+    templateUrl: './home1.component.html',
 })
 
-export class HomeComponent implements OnInit{
+export class Home1Component implements OnInit{
     correct_lines: number = 0;
     CODELIST: string[][] = [[" "," "," "," "],[" "," "," "," "],[" "," "," "," "],[" "," "," "," "],[" "," "," "," ", " "]];
     selected_line: number = 4;
@@ -25,7 +25,6 @@ export class HomeComponent implements OnInit{
     ["IF", "APPLE", ">", "MAX"], ["MAX", "=", "APPLE", " "], ["BUY", "MAX", " ", " "]];
     your_score: number[] = [0,0,0,0,0];
     opponent_score: number[] = [0,0,0,0,0];
-    open: Boolean = false;
 
     pointsSub: Subscription;
     score = 0;
@@ -61,8 +60,6 @@ export class HomeComponent implements OnInit{
             this.correct_lines += 1;
             if(this.correct_lines == 5) {
                 alert("You have completed this level!");
-                this.open = true;
-
             }
         } else {
             if(this.CODELIST[lineNumber][0] == this.SOLUTION[lineNumber][0]) {
