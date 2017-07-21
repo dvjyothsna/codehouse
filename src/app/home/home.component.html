@@ -188,6 +188,11 @@
                   <label for="tabexample1">OPERATORS</label>
                   <ul class="nav-list">
                       <button class="btn btn-primary" (click)="clickButton('FOR EACH')">FOR EACH</button>
+                      <!-- <a href="..." role="tooltip" aria-haspopup="true" class="tooltip tooltip-xs">
+                          <span class="example-icon example-add-icon"></span>
+                          <span class="tooltip-content">Lorem</span>
+                      </a> -->
+
                       <button class="btn btn-primary" (click)="clickButton('IN')">IN</button>
                       <button class="btn btn-primary" (click)="clickButton('IF')">IF</button>
                       <button class="btn btn-primary" (click)="clickButton('=')">=</button>
@@ -200,11 +205,13 @@
         </nav>
     </div>
 </div>
-<clr-modal [(clrModalOpen)]="open">
-  <h3 class="modal-title">Congratulations on completing level 1 :)</h3>
+<clr-modal [(clrModalOpen)]="open" >
+  <h3 class="modal-title">You were great and Grandma Jane was thanked you with a slixe of her world famous pie. YUMMMM!!!</h3>
   <div class="modal-body">
+    <img src="http://woman-space.ru/bitrix/templates/.default/components/bitrix/main.share/template1/handlers/lang/ru/pirojki"  height=90% width=90% />
     <p> Your score is : {{your_total}} </p>
     <p> Opponent score is : {{opp_total}} </p>
+    <p> Congratulations on completing level 1 :) </p>
     <p>Lets keep learning with Turtle Code!!</p>
 
   </div>
