@@ -18,14 +18,14 @@ describe('Home1Component', () => {
     beforeEach(() => {
         TestBed.configureTestingModule({
             declarations: [
-                HomeComponent
+                Home1Component
             ],
             imports: [
                 ClarityModule.forRoot()
             ]
         });
 
-        fixture = TestBed.createComponent(HomeComponent);
+        fixture = TestBed.createComponent(Home1Component);
         fixture.detectChanges();
         compiled = fixture.nativeElement;
 

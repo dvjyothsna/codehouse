@@ -60,11 +60,20 @@ export class HomeComponent implements OnInit{
             this.selected_word = 4;
             this.correct_lines += 1;
             if(this.correct_lines == 5) {
-                alert("You have completed this level!");
-                this.open = true;
+
+            var audioElement = document.createElement('audio');
+            audioElement.setAttribute('src', "images/congrats.mp3");
+            audioElement.play();
+            var audioElement = document.createElement('audio');
+            audioElement.setAttribute('src', "images/claps.mp3");
+            audioElement.play();
+            this.open = true;
 
             }
         } else {
+             var audioElement = document.createElement('audio');
+             audioElement.setAttribute('src', "images/oops.mp3");
+             audioElement.play();
             if(this.CODELIST[lineNumber][0] == this.SOLUTION[lineNumber][0]) {
                 this.COLOURLIST[lineNumber][0] = "success";
             } else {
@@ -94,7 +103,9 @@ export class HomeComponent implements OnInit{
 
 
     calculatePoints(lineNumber) {
-        console.log("in here");
+        var audioElement = document.createElement('audio');
+        audioElement.setAttribute('src', "images/yay.mp3");
+        audioElement.play();
         if(this.retries > 5) {
             this.sendPoints(0, lineNumber);
         }
