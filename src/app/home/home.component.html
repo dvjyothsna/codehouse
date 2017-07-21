@@ -3,6 +3,29 @@
   ~ This software is released under MIT license.
   ~ The full license information can be found in LICENSE in the root directory of this project.
   -->
+  <div class="row col-lg-12">
+      <div class="row">
+        <div class="col-lg-2">
+          <div class="card-img">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/f/f7/Apples_in_a_basket.jpg" height=120 width=160>
+            </div>
+        </div>
+      </div>
+        <div class="col-lg-10">
+          <div class="card-block clickable">
+                <p class="card-text">
+                    Grandma Jane has come to the supermarket. She wants to make an apple pie but she can buy only one apple. So, she wants to get the largest apple from the store.
+                    The supermarket keeps all applesof different sizes in a single basket.Can you help grandma pick the largest apple form the basket?
+                </p>
+            </div>
+        </div>
+</div>
+<div class="row">
+</div>
+<h4>Timer</h4>
+  <div class="progress danger">
+      <progress max="100" value="40" data-displayval="0%"></progress>
+  </div>
 <div class="main-container">
     <header class="header header-6">
       <div class="col-xs-2 flex-xs-middle">
@@ -13,100 +36,139 @@
         <div class="content-area">
           <p>CODE:</p>
           <div class="content-area">
+           <div class="row flex-items-xs-top">
+                <div class="col-xs-1 flex-xs-middle">
+                </div>
+                <div class="col-xs-1 flex-xs-middle">
+                </div>
+                <div class="col-xs-1 flex-xs-middle">
+                </div>
+                <div class="col-xs-1 flex-xs-middle">
+                </div>
+                <div class="col-xs-1 flex-xs-middle">
+                </div>
+                <div class="col-lg-6 flex-xs-middle">
+                <span class="btn" (click)="run(1)" style="outline: none">OP</span>
+                    <div class="btn-group">
+                      <button class="btn">You</button>
+                      <button class="btn">ABC</button>
+                    </div>
+                  </div>
+                </div>
                 <div class="row flex-items-xs-top">
-                    <div class="col-xs-2 flex-xs-middle">
+                    <div class="col-xs-1 flex-xs-middle">
                       <span class="btn btn-{{COLOURLIST[0][0]}}" (click)="clickLabel(0,0)">{{CODELIST[0][0]}}</span>
                         </div>
-                        <div class="col-xs-2 flex-xs-middle">
+                        <div class="col-xs-1 flex-xs-middle">
                       <span class="btn btn-{{COLOURLIST[0][1]}}" (click)="clickLabel(0,1)">{{CODELIST[0][1]}}</span>
                       </div>
-                      <div class="col-xs-2 flex-xs-middle">
+                      <div class="col-xs-1 flex-xs-middle">
                         <span class="btn btn-{{COLOURLIST[0][2]}}" (click)="clickLabel(0,2)">{{CODELIST[0][2]}}</span>
                       </div>
-                      <div class="col-xs-2 flex-xs-middle">
+                      <div class="col-xs-1 flex-xs-middle">
                       </div>
-                      <div class="col-xs-2 flex-xs-middle">
+                      <div class="col-xs-1 flex-xs-middle">
                       </div>
-                      <div class="col-xs-2 flex-xs-middle">
+                      <div class="col-xs-6 flex-xs-middle">
                         <span class="btn btn-success-outline" (click)="run(0)">RUN</span>
+                        <div class="btn-group">
+                              <button class="btn">5</button>
+                              <button class="btn">2</button>
+                            </div>
                       </div>
 
                     </div>
                     <div class="row flex-items-xs-top">
-                        <div class="col-xs-2 flex-xs-middle">
+                        <div class="col-xs-1 flex-xs-middle">
                           <span class="btn btn-{{COLOURLIST[1][0]}}" (click)="clickLabel(1,0)">{{CODELIST[1][0]}}</span>
                         </div>
-                        <div class="col-xs-2 flex-xs-middle">
+                        <div class="col-xs-1 flex-xs-middle">
                           <span class="btn btn-{{COLOURLIST[1][1]}}" (click)="clickLabel(1,1)">{{CODELIST[1][1]}}</span>
                         </div>
-                        <div class="col-xs-2 flex-xs-middle">
+                        <div class="col-xs-1 flex-xs-middle">
                           <span class="btn btn-{{COLOURLIST[1][2]}}" (click)="clickLabel(1,2)">{{CODELIST[1][2]}}</span>
                         </div>
-                        <div class="col-xs-2 flex-xs-middle">
+                        <div class="col-xs-1 flex-xs-middle">
                           <span class="btn btn-{{COLOURLIST[1][3]}}" (click)="clickLabel(1,3)">{{CODELIST[1][3]}}</span>
                         </div>
-                        <div class="col-xs-2 flex-xs-middle">
+                        <div class="col-xs-1 flex-xs-middle">
                         </div>
 
-                        <div class="col-xs-2 flex-xs-middle">
+                        <div class="col-xs-1 flex-xs-middle">
                           <span class="btn btn-success-outline" (click)="run(1)">RUN</span>
                         </div>
+                        <div class="btn-group">
+                              <button class="btn">5</button>
+                              <button class="btn">2</button>
+                            </div>
                     </div>
 
                     <div class="row flex-items-xs-top">
-                          <div class="col-xs-2 flex-xs-middle">
+                          <div class="col-xs-1 flex-xs-middle">
                           </div>
-                          <div class="col-xs-2 flex-xs-middle">
+                          <div class="col-xs-1 flex-xs-middle">
                           <span class="btn btn-{{COLOURLIST[2][0]}}" (click)="clickLabel(2,0)">{{CODELIST[2][0]}}</span>
                           </div>
-                          <div class="col-xs-2 flex-xs-middle">
+                          <div class="col-xs-1 flex-xs-middle">
                           <span class="btn btn-{{COLOURLIST[2][1]}}" (click)="clickLabel(2,1)">{{CODELIST[2][1]}}</span>
                           </div>
-                          <div class="col-xs-2 flex-xs-middle">
+                          <div class="col-xs-1 flex-xs-middle">
                             <span class="btn btn-{{COLOURLIST[2][2]}}" (click)="clickLabel(2,2)">{{CODELIST[2][2]}}</span>
                           </div>
-                          <div class="col-xs-2 flex-xs-middle">
+                          <div class="col-xs-1 flex-xs-middle">
                             <span class="btn btn-{{COLOURLIST[2][3]}}" (click)="clickLabel(2,3)">{{CODELIST[2][3]}}</span>
                           </div>
-                          <div class="col-xs-2 flex-xs-middle">
+                          <div class="col-xs-1 flex-xs-middle">
                             <span class="btn btn-success-outline" (click)="run(2)">RUN</span>
                           </div>
+                          <div class="btn-group">
+                              <button class="btn">5</button>
+                              <button class="btn">2</button>
+                            </div>
                       </div>
                       <div class="row flex-items-xs-top">
-                          <div class="col-xs-2 flex-xs-middle">
+                          <div class="col-xs-1 flex-xs-middle">
                           </div>
-                          <div class="col-xs-2 flex-xs-middle">
+                          <div class="col-xs-1 flex-xs-middle">
                           </div>
-                          <div class="col-xs-2 flex-xs-middle">
+                          <div class="col-xs-1 flex-xs-middle">
                             <span class="btn btn-{{COLOURLIST[3][0]}}" (click)="clickLabel(3,0)">{{CODELIST[3][0]}}</span>
                           </div>
-                          <div class="col-xs-2 flex-xs-middle">
+                          <div class="col-xs-1 flex-xs-middle">
                             <span class="btn btn-{{COLOURLIST[3][1]}}" (click)="clickLabel(3,1)">{{CODELIST[3][1]}}</span>
                           </div>
-                          <div class="col-xs-2 flex-xs-middle">
+                          <div class="col-xs-1 flex-xs-middle">
                             <span class="btn btn-{{COLOURLIST[3][2]}}" (click)="clickLabel(3,2)">{{CODELIST[3][2]}}</span>
                           </div>
 
-                          <div class="col-xs-2 flex-xs-middle">
+                          <div class="col-xs-1 flex-xs-middle">
                             <span class="btn btn-success-outline" (click)="run(3)">RUN</span>
                           </div>
+                          <div class="btn-group">
+                              <button class="btn">5</button>
+                              <button class="btn">2</button>
+                            </div>
                       </div>
                       <div class="row flex-items-xs-top">
-                          <div class="col-xs-2 flex-xs-middle">
+                          <div class="col-xs-1 flex-xs-middle">
                             <span class="btn btn-{{COLOURLIST[4][0]}}" (click)="clickLabel(4,0)">{{CODELIST[4][0]}}</span>
                           </div>
-                          <div class="col-xs-2 flex-xs-middle">
+                          <div class="col-xs-1 flex-xs-middle">
                             <span class="btn btn-{{COLOURLIST[4][1]}}" (click)="clickLabel(4,1)">{{CODELIST[4][1]}}</span>
                           </div>
-                          <div class="col-xs-2 flex-xs-middle">
+                          <div class="col-xs-1 flex-xs-middle">
                           </div>
-                          <div class="col-xs-2 flex-xs-middle">
+                          <div class="col-xs-1 flex-xs-middle">
                           </div>
-                          <div class="col-xs-2 flex-xs-middle">
+                          <div class="col-xs-1 flex-xs-middle">
                           </div>
-                          <div class="col-xs-2 flex-xs-middle">
+                          <div class="col-xs-1 flex-xs-middle">
                             <span class="btn btn-success-outline" (click)="run(4)">RUN</span>
                           </div>
+                          <div class="btn-group">
+                              <button class="btn">5</button>
+                              <button class="btn">2</button>
+                            </div>
                       </div>
               </div>
 
