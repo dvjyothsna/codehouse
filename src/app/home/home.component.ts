@@ -16,8 +16,8 @@
 })
 
 export class HomeComponent implements OnInit{
-    correct_lines = 0;
-    CODELIST: string[][] = [[" "," "," ", " "],[" "," "," "," "],[" "," "," "," "],[" "," "," "," "],[" "," "," "," ", " "]];
+    correct_lines: number = 0;
+    CODELIST: string[][] = [[" "," "," "," "],[" "," "," "," "],[" "," "," "," "],[" "," "," "," "],[" "," "," "," ", " "]];
     selected_line: number = 4;
     selected_word: number = 4;
     COLOURLIST: string[][] = [["primary","primary","primary", "primary"],["primary","primary","primary","primary"],["primary","primary","primary","primary"],["primary","primary","primary", "primary"],["primary","primary","primary", "primary", " "]];
