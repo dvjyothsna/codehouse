@@ -23,8 +23,12 @@ export class HomeComponent implements OnInit{
     COLOURLIST: string[][] = [["primary","primary","primary", "primary"],["primary","primary","primary","primary"],["primary","primary","primary","primary"],["primary","primary","primary", "primary"],["primary","primary","primary", "primary", " "]];
     SOLUTION: string[][] = [["MAX", "=", "APPLE #1", " "], ["FOR EACH", "APPLE", "IN", "BASKET"],
     ["IF", "APPLE", ">", "MAX"], ["MAX", "=", "APPLE", " "], ["BUY", "MAX", " ", " "]];
+    your_score: number[] = [0,0,0,0,0];
+    opponent_score: number[] = [0,0,0,0,0];
 
     pointsSub: Subscription;
+    score = 0;
+    retries = 0;
     opponentScore = 0;
     constructor(private socket:Socket) {}
     ngOnInit() {
@@ -46,6 +50,7 @@ export class HomeComponent implements OnInit{
         this.CODELIST[lineNumber][2] == this.SOLUTION[lineNumber][2] &&
         this.CODELIST[lineNumber][3] == this.SOLUTION[lineNumber][3]
         ) {
+            this.calculatePoints(lineNumber);
             this.COLOURLIST[lineNumber][0] = "danger\" disabled";
             this.COLOURLIST[lineNumber][1] = "danger\" disabled";
             this.COLOURLIST[lineNumber][2] = "danger\" disabled";
@@ -61,29 +66,45 @@ export class HomeComponent implements OnInit{
                 this.COLOURLIST[lineNumber][0] = "success";
             } else {
                 this.COLOURLIST[lineNumber][0] = "warning";
+                this.retries = this.retries + 1;
             }
             if(this.CODELIST[lineNumber][1] == this.SOLUTION[lineNumber][1]) {
                 this.COLOURLIST[lineNumber][1] = "success";
             } else {
                 this.COLOURLIST[lineNumber][1] = "warning";
+                this.retries = this.retries + 1;
             }
             if(this.CODELIST[lineNumber][2] == this.SOLUTION[lineNumber][2]) {
                 this.COLOURLIST[lineNumber][2] = "success";
             } else {
                 this.COLOURLIST[lineNumber][2] = "warning";
+                this.retries = this.retries + 1;
             }
             if(this.CODELIST[lineNumber][3] == this.SOLUTION[lineNumber][3]) {
                 this.COLOURLIST[lineNumber][3] = "success";
             } else {
                 this.COLOURLIST[lineNumber][3] = "warning";
+                this.retries = this.retries + 1;
             }
         }
     }
 
 
-    sendPoints() {
+    calculatePoints(lineNumber) {
+        console.log("in here");
+        if(this.retries > 5) {
+            this.sendPoints(0, lineNumber);
+        }
+        else {
+            let points = 100 - (this.retries * 5);
+            this.sendPoints(points, lineNumber);
+        }
+        this.retries = 0;
+    }
+    sendPoints(score, lineNumber) {
+        this.your_score[lineNumber] = score;
         let msg = "Hey";
-        this.socket.emit("message" , 10);
+        this.socket.emit("message" , { score : score , line : lineNumber});
     }
     getPoints() {
         let msg = "Hii";
@@ -94,7 +115,10 @@ export class HomeComponent implements OnInit{
     subscribeToNotifications() {
       this.pointsSub = this.getPoints().subscribe(
         (data) => {
+          this.opponent_score[data["points"]["line"]] = data["points"]["score"];
           this.opponentScore = this.opponentScore + data["points"];
+          console.log(this.opponentScore);
         });
     }
+
 }
