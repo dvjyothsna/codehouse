@@ -20,4 +20,7 @@ export class HomeComponent {
     clickButton(buttonText: string) {
         this.CODELIST[this.selected] = buttonText;
     }
+    run(lineNumber: number) {
+    
+    }
 }
