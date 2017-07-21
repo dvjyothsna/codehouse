@@ -8,6 +8,9 @@ import { AppComponent } from './app.component';
 import { ROUTING } from "./app.routing";
 import { HomeComponent } from "./home/home.component";
 import { AboutComponent } from "./about/about.component";
+import { SocketIoModule, SocketIoConfig } from 'ng-socket-io';
+
+const config: SocketIoConfig = { url: 'http://localhost:8988', options: {} };
 
 @NgModule({
     declarations: [
@@ -21,6 +24,7 @@ import { AboutComponent } from "./about/about.component";
         FormsModule,
         HttpModule,
         ClarityModule.forRoot(),
+        SocketIoModule.forRoot(config) ,
         ROUTING
     ],
     providers: [],

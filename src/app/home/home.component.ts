@@ -13,6 +13,12 @@ import { Component } from "@angular/core";
 export class HomeComponent {
     CODELIST: string[] = [];
     selected: number = 0;
+    COLOURLIST: string[] = [];
+    LINE_ONE: string[] = ["MAX", "=", "APPLE #1"];
+    LINE_TWO: string[] = [];
+    LINE_THREE: string[] = [];
+    LINE_FOUR: string[] = [];
+
 
     clickLabel(labelNumber: number) {
         this.selected = labelNumber;
@@ -21,6 +27,6 @@ export class HomeComponent {
         this.CODELIST[this.selected] = buttonText;
     }
     run(lineNumber: number) {
-    
+
     }
 }
