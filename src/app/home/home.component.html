@@ -24,6 +24,9 @@
 <div class="row col-lg-12">
  <h4><p align="right">Time Left : {{300 - seconds}}</p></h4>
 </div>
+<div class="progress danger">
+    <progress max="100" value={{seconds}} data-displayval="0%"></progress>
+</div>
 <button type="button" class="btn btn-success" (click)="visualize()">Visualize</button>
 
 
@@ -37,20 +40,23 @@
   <img  width=156 height=160 src="images/4.png">
   <img  width=156 height=160 src="images/empty.png">
 
-  <img *ngIf="c2" width=96 height=100 src="images/2.png">
-  <img *ngIf="cl" width=80 height=90 src="images/less.png">
-  <img *ngIf="c3"  width=126 height=130 src="images/3.png">
-  <img *ngIf="cl2" width=80 height=90 src="images/less.png">
+  <img *ngIf="c2" width=96 height=100 src="images/2.png" >
+  <img *ngIf="cl" width=80 height=90 src="images/less.png" >
+  <img *ngIf="c3"  width=126 height=130 src="images/3.png" [@focusPanel]='state'>
+  <img *ngIf="c3_1"  width=126 height=130 src="images/3.png" >
+  <img *ngIf="cl2" width=80 height=90 src="images/less.png" >
   <img  *ngIf="cg" width=80 height=90 src="images/greter.png">
-  <img  *ngIf="c1" width=76 height=80 src="images/1.png">
-  <img  *ngIf="c4" width=156 height=160 src="images/4.png">
+  <img  *ngIf="c1" width=76 height=80 src="images/1.png" >
+  <img  *ngIf="c4" width=146 height=150 src="images/4.png" [@focusPanel]='state'>
+  <img  width=156 height=160 src="images/empty.png" >
 
 
 
   <!-- <img *ngIf="im1" src="images/1.png"> -->
-  <img *ngIf="im2" src="images/c2.gif">
-  <img *ngIf="im3" width=136 height=120 src="images/c3.gif">
-  <img *ngIf="im4" src="images/c4.gif">
+  <!-- <img width: 80%;src="images/cart.jpg"> -->
+  <img *ngIf="im2" width=120 height=160 src="images/c2.jpg" [@flyInOut]='fly'>
+  <img *ngIf="im3" width=120 height=160 src="images/c3.jpg"[@flyInOut]='fly'>
+  <img *ngIf="im4" width=120 height=160  src="images/c4.jpg" [@flyInOut]='fly'>
   <!-- <ul style="display: inline">
     <li><img src="images/1.png"></li>
     <li><img src="images/2.png"></li>
@@ -60,9 +66,7 @@
 
 </div>
 
- <div class="progress danger">
-     <progress max="100" value={{seconds}} data-displayval="0%"></progress>
- </div>
+
   <div class="main-container">
     <div class="content-container">
         <div class="content-area">

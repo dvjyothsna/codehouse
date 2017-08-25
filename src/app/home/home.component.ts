@@ -3,7 +3,12 @@
  * This software is released under MIT license.
  * The full license information can be found in LICENSE in the root directory of this project.
  */
- import { Component, OnInit } from "@angular/core";
+ import { Component, OnInit, trigger,
+    state,
+    style,
+    transition,
+    animate,
+    keyframes } from "@angular/core";
  import { Socket } from 'ng-socket-io';
  import { NameService } from '../services/name.service';
 
@@ -16,6 +21,32 @@
 @Component({
     styleUrls: ['./home.component.scss'],
     templateUrl: './home.component.html',
+    animations: [
+
+        trigger('focusPanel', [
+            state('inactive', style({
+                transform: 'scale(1)',
+
+            })),
+            state('active', style({
+                transform: 'scale(1.1)',
+
+            })),
+            transition('inactive => active', animate('300ms ease-in')),
+            transition('active => inactive', animate('100ms ease-out'))
+        ]),
+        trigger('flyInOut', [
+
+          state('in' ,style({
+             transform: 'translateX(400%)' ,}
+          )),
+          state('out', style({
+            transform:  'translateX(-20%)',
+          })),
+          transition('in => out', animate('300ms 10ms ease-in'))
+        ]),
+
+    ]
 })
 
 export class HomeComponent implements OnInit{
@@ -32,6 +63,10 @@ showImage1: boolean = false;
     cl :boolean = false;
     cg :boolean = false;
     cl2 :boolean = false;
+    c3_1 :boolean = false;
+
+    state: string = 'inactive';
+    fly: string = 'in';
 
     step = 0;
 
@@ -56,7 +91,7 @@ showImage1: boolean = false;
     constructor(private socket:Socket , private nameService:NameService) {}
     ngOnInit() {
     this.subscribeToNotifications();
-        let timer = Observable.timer(0,1500);
+        let timer = Observable.timer(0,3000);
         timer.subscribe(t=>this.seconds = t);
     }
 
@@ -175,21 +210,32 @@ showImage1: boolean = false;
     console.log(this.step);
     if(this.step == 0) {
         this.im2 = true;
+        this.fly = 'in';
+        this.fly = 'out';
 
       }
     if (this.step == 1) {
+        this.fly = 'in';
         this.im2 = false;
         this.c2 = true;
         this.cl = true;
         this.c3 = true;
 
     }
-       if(this.step == 2) {
+    if(this.step == 2) {
+       this.state = 'active';
+       this.fly = 'in';
+    }
+       if(this.step == 3) {
+
           this.im2 = false;
           this.im3 = true;
+          this.state = 'inactive';
+          this.fly = 'in';
+          this.fly = 'out';
 
         }
-        if(this.step == 3) {
+        if(this.step == 4) {
         this.im3 = false;
         this.c2 = false;
         this.cl = false;
@@ -200,29 +246,52 @@ showImage1: boolean = false;
 
         }
 
-          if(this.step == 4) {
+        if(this.step == 5) {
+
+          this.state = 'active';
+          this.fly = 'in';
+        }
+
+          if(this.step == 6) {
+
               this.im3 = true;
+              this.fly = 'in';
+              this.fly = 'out';
+
           }
-          if(this.step == 5) {
+          if(this.step == 7) {
           this.im3 = false;
+          this.c3 = false;
+          this.c3_1 = true;
           this.c1 = false;
           this.cl =false;
           this.cl2 = true;
           this.cg = false;
           this.c4 = true;
-
+            this.state = 'inactive';
 
             }
+        if (this.step == 8) {
 
-        if(this.step == 6) {
+          this.state = 'active';
+          this.fly = 'in'
+        }
+        if(this.step == 9) {
+
+        this.c3_1 = false;
         this.im3 = false;
         this.c4 = false;
         this.cl2 = false;
         this.c3 = false;
         this.im4 = true;
+
+        this.fly = 'in';
+        this.fly = 'out';
         }
               this.step = this.step + 1;
 
     }
+
+
 
 }

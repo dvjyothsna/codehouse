@@ -15,9 +15,9 @@ app.get('*', function(req, res, next) {
 var server = http.createServer(app);
 var io = require('socket.io')(server);
 io.on('connection', function (socket) {
-    socket.emit('msg', { msg: 'Welcome bro!' });
+    socket.emit('msg', { msg: 'Welcome!' });
     socket.on('message',function(points){
-    socket.broadcast.emit('messageReturn', {points : points});
+        socket.broadcast.emit('messageReturn', {points : points});
     });
 
 
